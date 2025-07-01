@@ -58,7 +58,7 @@ const ProductManagement = () => {
             } else {
                 // Create new product
                 await axios.post(
-                    '${import.meta.env.VITE_API_BASE_URL}/api/products/create-product',
+                    `${import.meta.env.VITE_API_BASE_URL}/api/products/create-product`,
                     formData,
                     { withCredentials: true }
                 );

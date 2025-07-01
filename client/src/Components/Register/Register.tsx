@@ -90,7 +90,7 @@ const Register: React.FC = () => {
         try {
             // Submit registration data to the server
             const response = await axios.post<RegisterResponse>(
-                '${import.meta.env.VITE_API_BASE_URL}/api/authentication/signup',
+                `${import.meta.env.VITE_API_BASE_URL}/api/authentication/signup`,
                 formData,
                 { withCredentials: true } // Ensures cookie is stored if needed
             );

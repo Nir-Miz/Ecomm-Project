@@ -32,7 +32,7 @@ const UserManagement: React.FC = () => {
     // Fetch all users from the backend
     const fetchUsers = async () => {
         try {
-            const res = await axios.get<User[]>('${import.meta.env.VITE_API_BASE_URL}/api/users', { withCredentials: true });
+            const res = await axios.get<User[]>(`${import.meta.env.VITE_API_BASE_URL}/api/users`, { withCredentials: true });
             setUsers(res.data);
         } catch {
             toast.error('שגיאה בעת טעינת המשתמשים'); // Error loading users
@@ -92,7 +92,7 @@ const UserManagement: React.FC = () => {
                 toast.success('משתמש עודכן בהצלחה'); // User updated
             } else {
                 // Create new user
-                const res = await axios.post<User>('${import.meta.env.VITE_API_BASE_URL}/api/users/create-user', formData, { withCredentials: true });
+                const res = await axios.post<User>(`${import.meta.env.VITE_API_BASE_URL}/api/users/create-user`, formData, { withCredentials: true });
                 setUsers(prev => [...prev, res.data]);
                 toast.success('משתמש נוצר בהצלחה'); // User created
             }

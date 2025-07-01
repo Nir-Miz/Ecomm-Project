@@ -48,7 +48,7 @@ export const createOrder = createAsyncThunk<
 >('orders/createOrder', async (orderData, { rejectWithValue }) => {
     try {
         const { data } = await axios.post<Order>(
-            '${import.meta.env.VITE_API_BASE_URL}/api/orders',
+            `${import.meta.env.VITE_API_BASE_URL}/api/orders`,
             orderData,
             { withCredentials: true }
         );
@@ -66,7 +66,7 @@ export const fetchUserOrders = createAsyncThunk<
 >('orders/fetchUserOrders', async (_, { rejectWithValue }) => {
     try {
         const { data } = await axios.get<Order[]>(
-            '${import.meta.env.VITE_API_BASE_URL}/api/orders/my',
+            `${import.meta.env.VITE_API_BASE_URL}/api/orders/my`,
             { withCredentials: true }
         );
         return data;
@@ -100,7 +100,7 @@ export const fetchAllOrders = createAsyncThunk<
 >('orders/fetchAllOrders', async (_, { rejectWithValue }) => {
     try {
         const { data } = await axios.get<Order[]>(
-            '${import.meta.env.VITE_API_BASE_URL}/api/orders',
+            `${import.meta.env.VITE_API_BASE_URL}/api/orders`,
             { withCredentials: true }
         );
         return data;

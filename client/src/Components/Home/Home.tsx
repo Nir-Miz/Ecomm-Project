@@ -20,7 +20,7 @@ const Home: React.FC = () => {
 
     // useEffect to fetch products on component mount
     useEffect(() => {
-        fetch('${import.meta.env.VITE_API_BASE_URL}/api/products')
+        fetch(`${import.meta.env.VITE_API_BASE_URL}/api/products`)
             .then((res) => res.json())
             .then((data: Product[]) => setProducts(data)) // Update state with fetched products
             .catch((err) => console.error('Failed to fetch products:', err)); // Log errors if fetch fails
