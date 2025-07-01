@@ -1,0 +1,135 @@
+/* Main page container with padding and full viewport height */
+.page {
+  padding: 80px;
+  min-height: 100vh;
+  background-color: #0e0e0e; /* Dark background */
+}
+
+/* Content container centered with max width and styling */
+.container {
+  padding: 2rem;
+  color: white;
+  max-width: 700px;
+  margin: auto;
+  background-color: #121212; /* Slightly lighter dark background */
+  border-radius: 12px;
+  box-shadow: 0 0 20px #00f0ff55; /* Soft cyan glow */
+}
+
+/* Title styling with color and spacing */
+.title {
+  color: #00f0ff; /* Cyan color */
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+/* Wrapper for order number centered */
+.orderNumberWrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+/* Order number badge with direction, color, padding, and subtle glow */
+.orderNumber {
+  direction: ltr; /* Ensure left-to-right text for numbers */
+  color: #00f0ff;
+  font-size: 1.1rem;
+  font-weight: bold;
+  background-color: #1e1e1e;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  box-shadow: 0 0 8px #00f0ff44; /* Slight cyan glow */
+}
+
+/* Date text styling centered and muted */
+.date {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #ccc; /* Light gray */
+}
+
+/* List reset for order items */
+.itemList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Individual order item layout: flex with space between */
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid #00f0ff33; /* Light cyan border */
+  flex-wrap: wrap; /* Wrap on small screens */
+}
+
+/* Product name styling, flexible width */
+.productName {
+  flex: 1 1 40%;
+  color: #00f0ff;
+}
+
+/* Quantity styling, centered text */
+.quantity {
+  flex: 1 1 30%;
+  text-align: center;
+}
+
+/* Price styling, aligned to right */
+.price {
+  flex: 1 1 30%;
+  text-align: right;
+}
+
+/* Unavailable item styling: red color and italic */
+.unavailable {
+  color: #ff6666;
+  font-style: italic;
+  width: 100%;
+  text-align: center;
+}
+
+/* Total price styling: margin, center alignment, and cyan color */
+.total {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 1.3rem;
+  color: #00f0ff;
+}
+
+/* Message styling with margin and font size */
+.message {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1.2rem;
+}
+
+/* Error message styling with red color */
+.error {
+  color: #ff4c4c;
+}
+
+/* Responsive adjustments for small screens */
+@media (max-width: 480px) {
+  /* Stack item contents vertically */
+  .item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* Make product name, quantity, and price full width and left aligned */
+  .productName, .quantity, .price {
+    flex: 1 1 100%;
+    text-align: left;
+    margin-bottom: 0.3rem;
+  }
+
+  /* Slightly smaller font size for total */
+  .total {
+    font-size: 1.1rem;
+  }
+}

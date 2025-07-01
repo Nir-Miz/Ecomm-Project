@@ -1,0 +1,83 @@
+/* Container styles for the product details page */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1rem;
+  background-color: #0a0a0a; /* Dark background for contrast */
+  min-height: 100vh; /* Full viewport height for vertical centering */
+  text-align: center;
+  color: #fff; /* White text for readability */
+}
+
+/* Styling for the product image */
+.image {
+  width: 100%;
+  max-width: 350px; /* Limits image size for better layout */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 0 20px #00f0ff99; /* Soft cyan glow for emphasis */
+  margin-bottom: 2rem; /* Spacing below image */
+  object-fit: contain; /* Maintain aspect ratio without cropping */
+}
+
+/* Container for product details text */
+.details {
+  max-width: 600px; /* Maximum width for readability */
+  width: 100%; /* Responsive width */
+  background-color: #111; /* Slightly lighter dark background */
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #00f0ff33; /* Subtle glow around the box */
+  border: 1px solid #00f0ff55; /* Semi-transparent cyan border */
+}
+
+/* Product title styling */
+.details h2 {
+  font-size: 2rem;
+  color: #00f0ff; /* Cyan color to match theme */
+  margin-bottom: 1rem;
+}
+
+/* Product description text */
+.description {
+  font-size: 1.2rem;
+  color: #ccc; /* Light gray for softer text */
+  margin-bottom: 1.5rem;
+}
+
+/* Product price styling */
+.price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #00f0ff; /* Cyan accent */
+  margin-bottom: 1.5rem;
+}
+
+/* Add to Cart button styles */
+.addToCart {
+  background-color: #00f0ff; /* Cyan button background */
+  color: #000; /* Black text for contrast */
+  padding: 0.7rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth hover transition */
+}
+
+/* Hover effect for Add to Cart button */
+.addToCart:hover {
+  background-color: #00cfff; /* Slightly lighter cyan */
+  box-shadow: 0 0 12px #00f0ff; /* Glow effect on hover */
+}
+
+/* Styles for loading and error messages */
+.loading,
+.error {
+  color: #ff4d4d; /* Bright red for visibility */
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+}

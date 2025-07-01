@@ -1,0 +1,172 @@
+/* Center-align all h2 headings */
+h2 {
+    text-align: center;
+}
+
+/* Main container padding */
+.container {
+  padding: 2rem;
+}
+
+/* Responsive grid layout for product cards */
+.grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+/* Search input styling */
+.searchInput {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.6rem 1rem;
+  margin: 1rem auto 2rem;
+  display: block;
+  border: 1px solid #00f0ff;
+  border-radius: 8px;
+  background-color: #000;
+  color: #00f0ff;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+/* Search input focus effect */
+.searchInput:focus {
+  outline: none;
+  box-shadow: 0 0 10px #00f0ff;
+}
+
+/* Pagination container: horizontally centered with spacing */
+.pagination {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Pagination buttons style */
+.pageButton {
+  background-color: transparent;
+  border: 1px solid #00f0ff;
+  color: #00f0ff;
+  padding: 0.4rem 0.8rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Pagination buttons hover effect */
+.pageButton:hover {
+  background-color: #00f0ff;
+  color: #000;
+  box-shadow: 0 0 8px #00f0ff;
+}
+
+/* Message displayed when no search results found */
+.noResults {
+  color: #00f0ff;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/* Active page button styling */
+.activePage {
+  background-color: #00f0ff;
+  color: #000;
+  font-weight: bold;
+}
+
+/* Duplicate search input styles with subtle box shadow */
+.searchInput {
+  width: 100%;
+  max-width: 400px;
+  margin: 1rem auto 2rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #00f0ff;
+  border-radius: 8px;
+  background-color: #000;
+  color: #00f0ff;
+  display: block;
+  box-shadow: 0 0 5px #00f0ff44;
+}
+
+/* Placeholder text styling for search input */
+.searchInput::placeholder {
+  color: #00f0ff88;
+}
+
+/* Product card container styles */
+.card {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  background: #111;
+  border: 1px solid #00f0ff;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 0 10px #00f0ff33;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect to slightly scale product cards */
+.card:hover {
+  transform: scale(1.03);
+}
+
+/* Product name heading styling */
+h3 {
+  margin: 0.5rem 0;
+  font-size: 1.3rem;
+  color: #ffffff;
+  text-align: center;
+}
+
+/* Product price paragraph styling */
+p {
+  font-size: 1.3rem;
+  color: #00f0ff;
+  text-align: center;
+}
+
+/* Product image sizing */
+img {
+  width: 70%;
+}
+
+/* Container for buttons at bottom of card */
+.bottomContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Styling for "Details" and "Add to Cart" buttons */
+.detailsBtn,
+.addToCartBtn {
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #00f0ff;
+  border: none;
+  color: #000;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect for action buttons */
+.detailsBtn:hover,
+.addToCartBtn:hover {
+  background-color: #00cfff;
+  box-shadow: 0 0 10px #00f0ff;
+}
+
+/* Error message styling */
+.error {
+  color: red;
+  text-align: center;
+}

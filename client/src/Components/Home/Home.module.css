@@ -1,0 +1,147 @@
+/* Container for the entire Home page, sets font and base colors */
+.homeContainer {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0a0f1c;
+  color: white;
+}
+
+/* Hero Section styling - large banner area at the top */
+.hero {
+  height: 60vh; /* Set height relative to viewport */
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364); /* Gradient background */
+  display: flex;
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+  text-align: center;
+  position: relative;
+}
+
+/* Overlay container inside the hero section for content */
+.heroOverlay {
+  padding: 2rem;
+  animation: fadeIn 1s ease-in; /* Fade in animation on load */
+}
+
+/* Hero headline styling */
+.heroOverlay h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 15px #00f0ff; /* Neon glow effect */
+}
+
+/* Hero subheading paragraph */
+.heroOverlay p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: #c0f7ff; /* Light blue text */
+}
+
+/* Hero button styling */
+.heroOverlay button {
+  background-color: #00f0ff;
+  border: none;
+  color: #000;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 12px;
+  box-shadow: 0 0 15px #00f0ff; /* Glow around button */
+  transition: all 0.3s ease; /* Smooth transition for hover */
+}
+
+/* Button hover effect */
+.heroOverlay button:hover {
+  background-color: #00cfff;
+  box-shadow: 0 0 25px #00f0ff; /* Stronger glow on hover */
+}
+
+/* Carousel wrapper section - container for product slider */
+.carouselWrapper {
+  padding: 48px 5vw;
+  background-color: #0e0e0e; /* Dark background to differentiate section */
+}
+
+/* Carousel section title */
+.carouselWrapper h2 {
+  color: #00f0ff;
+  text-align: center;
+  font-size: 3.125rem;
+  width: 100%;
+  text-shadow: 0 0 15px #00f0ff; /* Neon glow effect */
+}
+
+/* Individual carousel item styling */
+.carouselItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #1a1a1a; /* Dark card background */
+  padding: 20px;
+  border-radius: 16px; /* Rounded corners */
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4); /* Subtle shadow for depth */
+  margin: 0 auto;
+  max-width: 90%;
+  width: 90%;
+  transition: transform 0.3s ease; /* Smooth scale animation */
+}
+
+/* Hover effect scales carousel item slightly */
+.carouselItem:hover {
+  transform: scale(1.05);
+}
+
+/* Product image styling */
+.productImg {
+  width: 100%;
+  height: 180px;
+  object-fit: contain; /* Maintain aspect ratio */
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+}
+
+/* Product title inside carousel */
+.carouselItem h3 {
+  margin: 0.5rem 0;
+  font-size: 1.3rem;
+  color: #ffffff;
+  text-align: center;
+}
+
+/* Product price styling */
+.carouselItem p {
+  font-size: 1.3rem;
+  color: #00f0ff;
+  text-align: center;
+}
+
+/* Keyframes for fade-in animation used in heroOverlay */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 600px) {
+  .heroOverlay h1 {
+    font-size: 2.5rem;
+  }
+
+  .heroOverlay p {
+    font-size: 1.2rem;
+  }
+
+  .heroOverlay button {
+    padding: 0.8rem 1.6rem;
+    font-size: 1rem;
+  }
+
+  .carouselWrapper h2 {
+    font-size: 2rem;
+  }
+
+  .productImg {
+    height: 150px; /* Smaller image height on mobile */
+  }
+}

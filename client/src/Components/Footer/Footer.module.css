@@ -1,0 +1,39 @@
+/* Footer container styling */
+.footer {
+  background-color: #000; /* Solid black background for contrast */
+  border-top: 1px solid #00f0ff; /* Top border with cyan accent color */
+  padding: 2.5rem 1rem; /* Vertical and horizontal padding */
+  color: #00f0ff; /* Cyan text color matching brand theme */
+  text-align: center; /* Center-align text inside the footer */
+  box-shadow: 0 -2px 10px #00f0ff33; /* Subtle cyan shadow above the footer for depth */
+}
+
+/* Paragraph styling inside footer */
+.footer p {
+  margin: 0; /* Remove default margin for tight spacing */
+  font-size: 1rem; /* Readable base font size */
+  color: #00f0ffcc; /* Slightly transparent cyan for less emphasis */
+}
+
+/* Container for footer navigation links */
+.links {
+  margin-top: 0.8rem; /* Space above the links */
+  display: flex; /* Use flexbox for horizontal layout */
+  justify-content: center; /* Center links horizontally */
+  gap: 20px; /* Spacing between links */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+/* Individual link styling */
+.links a {
+  color: #00f0ff; /* Cyan text color */
+  text-decoration: none; /* Remove underline */
+  font-weight: 500; /* Medium font weight for readability */
+  transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+/* Hover effect for links */
+.links a:hover {
+  color: #00cfff; /* Slightly brighter cyan on hover */
+  text-shadow: 0 0 5px #00f0ff; /* Glow effect around text */
+}

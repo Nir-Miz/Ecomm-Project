@@ -1,0 +1,57 @@
+Project Setup
+* Create a new React app (e.g. npm create vite@latest) - DONE!
+* Create an Express server folder - DONE!
+
+Database & Models
+* Install Mongoose and connect to MongoDB - DONE!
+* Define schemas:
+* User: name, email, password - DONE!
+* Product: name, price, description - DONE!
+* Order: - DONE!
+    * --- customer (ref User)
+    * --- items array of { product: ref Product, quantity: Number }
+
+Authentication
+* Register endpoint (POST /api/register) - DONE!
+* Login endpoint (POST /api/login) - DONE!
+
+Product API
+* GET /api/products → list all - DONE!
+* GET /api/products/:id → single product - DONE!
+* POST /api/products → create (protected by Admin) - DONE!
+* PUT /api/products/:id → update (protected by Admin) - DONE!
+* DELETE /api/products/:id → remove (protected by Admin) - DONE!
+
+Order API
+* GET /api/orders → user’s own orders (protected by Admin) - DONE!
+* POST /api/orders → create new order with embedded items (protected by Admin) - DONE!
+
+Frontend Pages
+Home Page - DONE!
+NavBar - DONE!
+* Register - DONE!
+* Login - DONE!
+
+* Products (3 pages 👇🏼)
+1. List view: show all products with “Add to Cart” buttons - DONE!
+2. Detail view: show one product’s full information - DONE!
+3. Admin only: forms to Add, Edit or Delete products
+
+4. Cart & Order (3 pages 👇🏼) - DONE!
+* Let users select products and set quantities - DONE!
+* Show current cart contents and total price - DONE!
+* “Place Order” button submits the order to the server - DONE!
+5. Order History - DONE!
+* Display a list of the logged-in user’s past orders - DONE!
+* Each order shows items, quantities, date and total cost - DONE!
+
+Admin Role
+   Admins can access all CRUD endpoints for Users, Products and Orders
+   In the UI, show extra pages/forms for:
+* User Management: list, create, edit, delete any user - DONE!
+* Product Management: same as above - DONE!
+* Order Management: view, update or cancel any order - DONE!
+
+Bonus (optional)
+   * Add search or pagination on products - DONE!
+   * Compare embedding vs. referencing product data in orders - DONE!

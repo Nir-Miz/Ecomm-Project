@@ -1,0 +1,117 @@
+/* src/pages/Orders.module.css */
+
+/* Container for the whole orders page */
+.container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 1rem;
+  color: white;
+  box-sizing: border-box; /* Includes padding and border in element's total width and height */
+}
+
+/* Page title styling */
+.title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #00f0ff; /* Neon blue color for emphasis */
+}
+
+/* Individual order card styling */
+.orderCard {
+  background-color: #1a1a2e; /* Dark blue/purple background */
+  border: 1px solid #00f0ff55; /* Semi-transparent blue border */
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 0 10px #00f0ff33; /* Subtle glowing shadow */
+  transition: transform 0.2s ease; /* Smooth hover animation */
+}
+
+/* Hover effect to lift the card slightly */
+.orderCard:hover {
+  transform: translateY(-3px);
+}
+
+/* Paragraphs inside order cards */
+.orderCard p {
+  margin: 0.5rem 0;
+  color: #ddd; /* Light gray for better readability */
+}
+
+/* List of items inside each order */
+.itemList {
+  list-style: none; /* Remove bullets */
+  padding: 0;
+  margin: 1rem 0 0.5rem;
+}
+
+/* Each item line styling */
+.itemList li {
+  padding: 0.3rem 0;
+  border-bottom: 1px solid #00f0ff22; /* Thin, translucent blue separator */
+  font-size: 0.95rem;
+}
+
+/* Total price section styling */
+.total {
+  margin-top: 1rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #00f0ff; /* Highlighted in neon blue */
+}
+
+/* Button to view order details */
+.detailsButton {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #00f0ff;
+  color: black;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for details button */
+.detailsButton:hover {
+  background-color: #00cfff;
+  box-shadow: 0 0 8px #00f0ff;
+}
+
+/* Generic message styling (e.g. no orders, loading) */
+.message {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  color: #ccc; /* Light gray */
+}
+
+/* Error message styling */
+.error {
+  color: #ff4c4c; /* Bright red for errors */
+}
+
+/* ---- Responsive Styles for smaller screens ---- */
+@media (max-width: 600px) {
+  .container {
+    padding: 1rem 0.5rem; /* Less horizontal padding for narrow screens */
+  }
+
+  .orderCard {
+    padding: 1rem; /* Slightly reduced padding */
+  }
+
+  .itemList li {
+    font-size: 0.85rem; /* Smaller text for mobile */
+  }
+
+  .detailsButton {
+    width: 95%; /* Make button nearly full width */
+    text-align: center;
+    padding: 0.7rem;
+    font-size: 1rem; /* Slightly larger font for tap friendliness */
+  }
+}
