@@ -32,7 +32,7 @@ const UserManagement: React.FC = () => {
     // Fetch all users from the backend
     const fetchUsers = async () => {
         try {
-            const res = await axios.get<User[]>('http://localhost:3000/api/users', { withCredentials: true });
+            const res = await axios.get<User[]>('${import.meta.env.VITE_API_BASE_URL}/api/users', { withCredentials: true });
             setUsers(res.data);
         } catch {
             toast.error('שגיאה בעת טעינת המשתמשים'); // Error loading users
@@ -45,7 +45,7 @@ const UserManagement: React.FC = () => {
     const handleDelete = async (id?: string) => {
         if (!id || !window.confirm('האם אתה בטוח שברצונך למחוק את המשתמש?')) return;
         try {
-            await axios.delete(`http://localhost:3000/api/users/${id}`, { withCredentials: true });
+            await axios.delete(`${import.meta.env.VITE_API_BASE_URL}/api/users/${id}`, { withCredentials: true });
             setUsers(users.filter(user => user._id !== id));
             toast.success('משתמש נמחק בהצלחה'); // User deleted successfully
         } catch {
@@ -88,11 +88,11 @@ const UserManagement: React.FC = () => {
         try {
             if (editMode && formData._id) {
                 // Update existing user
-                await axios.put(`http://localhost:3000/api/users/${formData._id}`, formData, { withCredentials: true });
+                await axios.put(`${import.meta.env.VITE_API_BASE_URL}/api/users/${formData._id}`, formData, { withCredentials: true });
                 toast.success('משתמש עודכן בהצלחה'); // User updated
             } else {
                 // Create new user
-                const res = await axios.post<User>('http://localhost:3000/api/users/create-user', formData, { withCredentials: true });
+                const res = await axios.post<User>('${import.meta.env.VITE_API_BASE_URL}/api/users/create-user', formData, { withCredentials: true });
                 setUsers(prev => [...prev, res.data]);
                 toast.success('משתמש נוצר בהצלחה'); // User created
             }

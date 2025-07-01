@@ -50,7 +50,7 @@ const ProductManagement = () => {
             if (formData._id) {
                 // Update existing product
                 await axios.put(
-                    `http://localhost:3000/api/products/${formData._id}`,
+                    `${import.meta.env.VITE_API_BASE_URL}/api/products/${formData._id}`,
                     formData,
                     { withCredentials: true }
                 );
@@ -58,7 +58,7 @@ const ProductManagement = () => {
             } else {
                 // Create new product
                 await axios.post(
-                    'http://localhost:3000/api/products/create-product',
+                    '${import.meta.env.VITE_API_BASE_URL}/api/products/create-product',
                     formData,
                     { withCredentials: true }
                 );
@@ -83,7 +83,7 @@ const ProductManagement = () => {
     // Delete a product by ID
     const handleDelete = async (id: string) => {
         try {
-            await axios.delete(`http://localhost:3000/api/products/${id}`, {
+            await axios.delete(`${import.meta.env.VITE_API_BASE_URL}/api/products/${id}`, {
                 withCredentials: true,
             });
             toast.success('Product deleted');

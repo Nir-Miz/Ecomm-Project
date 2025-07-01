@@ -71,7 +71,7 @@ const Login: React.FC = () => {
         try {
             // Make API call to login endpoint with form data
             const response = await axios.post<LoginResponse>(
-                'http://localhost:3000/api/authentication/login',
+                '${import.meta.env.VITE_API_BASE_URL}/api/authentication/login',
                 formData,
                 { withCredentials: true } // Include cookies if needed
             );

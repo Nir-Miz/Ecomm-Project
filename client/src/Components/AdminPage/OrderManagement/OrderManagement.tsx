@@ -25,7 +25,7 @@ const OrderManagement = () => {
     // Handle order deletion
     const handleDelete = async (id: string) => {
         try {
-            await axios.delete(`http://localhost:3000/api/orders/${id}`, {
+            await axios.delete(`${import.meta.env.VITE_API_BASE_URL}/api/orders/${id}`, {
                 withCredentials: true,
             });
             toast.success('Order deleted');
@@ -58,7 +58,7 @@ const OrderManagement = () => {
         if (!editOrderId) return;
         try {
             await axios.put(
-                `http://localhost:3000/api/orders/${editOrderId}`,
+                `${import.meta.env.VITE_API_BASE_URL}/api/orders/${editOrderId}`,
                 { items: updatedItems },
                 { withCredentials: true }
             );
