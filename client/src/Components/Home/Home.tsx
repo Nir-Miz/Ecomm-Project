@@ -63,7 +63,7 @@ const Home: React.FC = () => {
                             {/* Display product image with alt text for accessibility */}
                             <img
                                 className={style.productImg}
-                                src={`./src/assets/${product.name}.webp`}
+                                src={`/assets/${product.name}.webp`}
                                 alt={product.name}
                             />
                             <h3>{product.name}</h3>

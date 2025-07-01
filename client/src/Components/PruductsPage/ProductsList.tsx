@@ -85,7 +85,7 @@ const ProductsList: React.FC = () => {
                     // Map through current page of products and display cards
                     currentProducts.map(product => (
                         <div key={product._id} className={styles.card}>
-                            <img src={`/src/assets/${product.name}.webp`} alt={product.name} />
+                            <img src={`/assets/${product.name}.webp`} alt={product.name} />
                             <h3>{product.name}</h3>
                             <p>${product.price.toFixed(2)}</p>
                             <div className={styles.bottomContainer}>

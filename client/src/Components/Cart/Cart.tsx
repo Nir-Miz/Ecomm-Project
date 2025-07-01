@@ -75,7 +75,7 @@ const Cart: React.FC = () => {
                                 {item.product ? (
                                     <>
                                         <img
-                                            src={`/src/assets/${item.product.name}.webp`}
+                                            src={`/assets/${item.product.name}.webp`}
                                             alt={item.product.name}
                                             className={styles.itemImage}
                                         />

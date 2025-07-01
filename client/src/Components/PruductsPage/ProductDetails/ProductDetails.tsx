@@ -53,7 +53,7 @@ const ProductDetails: React.FC = () => {
     return (
         <div className={styles.container}>
             <img
-                src={`/src/assets/${product.name}.webp`}
+                src={`/assets/${product.name}.webp`}
                 alt={product.name}
                 className={styles.image}
             />
