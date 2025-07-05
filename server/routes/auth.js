@@ -38,7 +38,7 @@ router.post('/signup', async (req, res) => {
         res.cookie('token', token, {
             httpOnly: true,
             secure: process.env.NODE_ENV === 'production', // only send cookie over HTTPS in production
-            sameSite: 'Strict', // protect against CSRF
+            sameSite: 'None', // protect against CSRF
             maxAge: 3600000 // cookie expires in 1 hour
         });
 
@@ -95,7 +95,7 @@ router.post('/login', async (req, res) => {
         res.cookie('token', token, {
             httpOnly: true,
             secure: process.env.NODE_ENV === 'production',
-            sameSite: 'Strict',
+            sameSite: 'None',
             maxAge: 3600000
         });
 
