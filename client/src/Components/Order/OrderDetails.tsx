@@ -73,7 +73,7 @@ const OrderDetails: React.FC = () => {
                 </ul>
 
                 {/* Total amount to pay */}
-                <p className={styles.total}>סה״כ לתשלום: <strong>₪{total.toFixed(2)}</strong></p>
+                <p className={styles.total}>סה״כ שולם: <strong>₪{total.toFixed(2)}</strong></p>
             </div>
         </div>
     );

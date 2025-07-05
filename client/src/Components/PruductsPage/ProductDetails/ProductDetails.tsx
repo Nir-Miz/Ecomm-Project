@@ -61,7 +61,6 @@ const ProductDetails: React.FC = () => {
                 <h2>{product.name}</h2>
                 <p className={styles.description}>{product.description}</p>
                 <p className={styles.price}>${product.price.toFixed(2)}</p>
-                <button className={styles.addToCart}>Add to Cart</button>
             </div>
         </div>
     );
